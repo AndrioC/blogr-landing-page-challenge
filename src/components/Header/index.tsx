@@ -62,8 +62,8 @@ const Header:React.FC = () => {
                     </button> 
                 </HeaderContent>
 
-                <Menu>
-                    <MenuList isOpen={isOpen}  isSelected={isSelected} selectedId={selectedId} indexItem={selectedIndex}>
+                <Menu isOpen={isOpen}>
+                    <MenuList isOpen={isOpen} isSelected={isSelected} selectedId={selectedId} indexItem={selectedIndex}>
                         <ul>
                             {menuData.map((item, index) => (
                                 <>
@@ -74,19 +74,24 @@ const Header:React.FC = () => {
                                     </button>
                                 </li>
                                 <SubMenu key={Math.random()} isSelected={isSelected} selectedId={selectedId} indexItem={index}>
+                                    <ul>
                                     {item.submenu.map(sub => (
                                         <li key={sub.id}>
                                             <a href="#about">{sub.title}</a>
                                         </li>
                                     ))}
+                                    </ul>
                                 </SubMenu>
                                 </>
                             ))}
                         </ul>
                     </MenuList>
 
-                    <AuthSignUp>
+                    <div className={'division-line'}/>
 
+                    <AuthSignUp>
+                        <span>Login</span>     
+                        <button type="button">Sign Up</button>                    
                     </AuthSignUp>
                 </Menu>
                                

@@ -6,6 +6,10 @@ interface HeaderContentProps{
     isOpen: boolean;
 }
 
+interface MenuProps{
+    isOpen: boolean;
+}
+
 interface MenuListProps{
     isOpen: boolean;
     isSelected: boolean;
@@ -83,20 +87,40 @@ export const HeaderContent = styled.div<HeaderContentProps>`
 
 `;
 
-export const Menu = styled.div`
+export const Menu = styled.div<MenuProps>`
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background: var(--white);
     width: 324px;
     height: 513px;
     border-radius: 5px;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+    transition: opacity 900ms, visibility 900ms;
+    visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
+    opacity: ${props => props.isOpen ? 1 : 0};
+
+    .division-line{
+        height: 1px;
+        width: 84%;
+        background: var(--gray-50);
+        margin-top: 24px;
+    }
 `;
 
 export const MenuList = styled.div<MenuListProps>`
 
     @media(max-width: 900px){
-        margin-top: 24px;
+        position: relative;
+
+        /* &::after{
+            content: '';
+            height: 1px;
+            width: 41%;
+            bottom: px;
+            position: absolute;
+            background: red; 
+        } */
 
         ul{
             li {
@@ -147,10 +171,6 @@ export const MenuList = styled.div<MenuListProps>`
                     opacity: 1;
                 }
 
-                & + li {
-                    margin-top: 24px;
-                }
-
             }
 
         
@@ -163,7 +183,6 @@ export const SubMenu = styled.div<SubMenuListProps>`
     display: flex;
     align-items: center;
     transition: display 0.9s;
-    background: red;
     display: ${props => props.isSelected && (props.selectedId === props.indexItem + 1) ? 'block' : 'none'};
 
     @media(max-width: 900px){
@@ -173,29 +192,61 @@ export const SubMenu = styled.div<SubMenuListProps>`
         border-radius: 5px;
         background: var(--gray-50);
 
-        li {
-            display: flex;
-            a {
-                color: black;
-                text-decoration: none;
-                font-size: 16px;
-                font-weight: 800;
-                color: var(--blue-400);
-                transition: filter .3s;
 
-                &:hover{
-                    filter: brightness(0.33);
+        ul {
+            li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+                a {
+                    color: black;
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: 800;
+                    color: var(--blue-400);
+                    transition: filter .3s;
+                    margin-top: 10px;
+
+                    &:hover{
+                        filter: brightness(0.33);
+                    }
                 }
             }
-
-
-
-
         }
     }
 `;
 
 export const AuthSignUp = styled.div`
+    display: flex;
+    align-items: center;
 
 
+    @media(max-width: 900px){
+        flex-direction: column;
+        margin-top: 24px;
+
+        span {
+            font-size: 18px;
+            font-weight: bolder;
+            color: var(--blue-400);
+        }
+
+        button {
+            background: linear-gradient(135deg, var(--red-10) 0%, var(--red-100) 100%);
+            color: var(--white);
+            border: none;
+            margin-top: 24px;
+            width: 138px;
+            height: 48px;
+            border-radius: 27px;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: 'Ubuntu';
+            transition: filter .3s;
+
+            &:hover {
+                filter: brightness(0.873);
+            }
+        }
+    }
 `;
