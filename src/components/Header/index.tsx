@@ -8,6 +8,7 @@ import {
     MenuList,
     SubMenu,
     AuthSignUp,
+    InfoContent,
 } from './styles'
 
 import logoImg from '../../assets/images/logo.svg'
@@ -55,11 +56,22 @@ const Header:React.FC = () => {
             <Content>
 
                 <HeaderContent isOpen={isOpen}>
-                    <img src={logoImg} alt="logo"/>
-                    <button onClick={handleMenu}>
-                        <img className={'hamburger-menu'} src={hamburgerIcon} alt="hamburger-menu"/>
-                        <img className={'close-menu'} src={closeIcon} alt="close-menu"/>
-                    </button> 
+                    <div className={'menuInfo'}>
+                        <img src={logoImg} alt="logo"/>
+                        <button onClick={handleMenu}>
+                            <img className={'hamburger-menu'} src={hamburgerIcon} alt="hamburger-menu"/>
+                            <img className={'close-menu'} src={closeIcon} alt="close-menu"/>
+                        </button> 
+                    </div>
+
+                    <InfoContent>
+                        <h1>A modern publishing platform</h1>
+                        <p>Grow yout audience and build your online brand</p>
+                        <div>
+                            <button className={'button-start-for-free'} type="button">Start for Free</button>
+                            <button className={'button-lear-more'} type="button">Learn More</button>
+                        </div>
+                    </InfoContent>
                 </HeaderContent>
 
                 <Menu isOpen={isOpen}>
