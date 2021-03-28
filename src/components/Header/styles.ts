@@ -131,7 +131,6 @@ export const MenuList = styled.div<MenuListProps>`
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                position: relative;
                 margin-top: 24px;
 
                 span {
@@ -185,6 +184,7 @@ export const MenuList = styled.div<MenuListProps>`
 export const SubMenu = styled.div<SubMenuListProps>`
     display: flex;
     align-items: center;
+    justify-content: center;
     transition: display 0.9s;
     display: ${props => props.isSelected && (props.selectedId === props.indexItem + 1) ? 'block' : 'none'};
 
@@ -195,26 +195,25 @@ export const SubMenu = styled.div<SubMenuListProps>`
         border-radius: 5px;
         background: var(--gray-50);
 
-
-        ul {
-            li {
+        .list-submenu{
             display: flex;
             align-items: center;
             justify-content: center;
-                a {
-                    color: black;
-                    text-decoration: none;
-                    font-size: 16px;
-                    font-weight: 800;
-                    color: var(--blue-400);
-                    transition: filter .3s;
-                    margin-top: 10px;
+            padding-top: 6px;
+            a {
+                margin-bottom: -12px;
+                color: black;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 800;
+                color: var(--blue-400);
+                transition: filter .3s;
 
-                    &:hover{
-                        filter: brightness(0.33);
-                    }
+                &:hover{
+                    filter: brightness(0.33);
                 }
             }
+
         }
     }
 `;
@@ -245,10 +244,9 @@ export const AuthSignUp = styled.div`
             font-size: 18px;
             font-weight: bold;
             font-family: 'Ubuntu';
-            transition: filter .3s;
 
-            &:hover {
-                filter: brightness(0.873);
+            &:hover {                
+                background: var(--red-50); 
             }
         }
     }
@@ -308,7 +306,7 @@ export const InfoContent = styled.div`
                 }
             }
 
-            .button-lear-more{
+            .button-learn-more{
                 background: transparent;
                 border: 2px solid var(--white);
                 color: var(--white);

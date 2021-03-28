@@ -69,7 +69,7 @@ const Header:React.FC = () => {
                         <p>Grow yout audience and build your online brand</p>
                         <div>
                             <button className={'button-start-for-free'} type="button">Start for Free</button>
-                            <button className={'button-lear-more'} type="button">Learn More</button>
+                            <button className={'button-learn-more'} type="button">Learn More</button>
                         </div>
                     </InfoContent>
                 </HeaderContent>
@@ -88,7 +88,7 @@ const Header:React.FC = () => {
                                 <SubMenu key={Math.random()} isSelected={isSelected} selectedId={selectedId} indexItem={index}>
                                     <ul>
                                     {item.submenu.map(sub => (
-                                        <li key={sub.id}>
+                                        <li key={sub.id} className={'list-submenu'}>
                                             <a href="#about">{sub.title}</a>
                                         </li>
                                     ))}

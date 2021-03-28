@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 
 import imgBgSectionOne from '../../assets/images/illustration-editor-mobile.svg'
+
 import imgPhoneBgSectionTwo from '../../assets/images/illustration-phones.svg'
 import imgCirclesBgSectionTwo from '../../assets/images/bg-pattern-circles.svg'
+
+import imgComputerSectionThree from '../../assets/images/illustration-laptop-mobile.svg'
 
 export const Container = styled.div`
     display: flex;
@@ -153,5 +156,44 @@ export const ContentSecondSection = styled.div`
             }
         }
     }
+
+`;
+
+export const ContentThirdSection = styled.div`
+
+    @media(max-width: 900px){
+        margin-top: 75px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .bg-computer-third-section{
+            background: url(${imgComputerSectionThree}) no-repeat;
+            width: 100%;
+            height: 360px;    
+        }
+
+        h1 {
+            margin-top: 45px;    
+            font-size: 27px; 
+            color: var(--blue-400);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 27px;
+            margin-top: 18px;
+            text-align: center;
+            max-width: 300px;
+            color: var(--gray-300);
+
+        }
+    }
+
 
 `;

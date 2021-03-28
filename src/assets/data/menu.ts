@@ -5,11 +5,19 @@ const menu = [
         submenu: [
         {
             id: 1,
-            title: 'About',
+            title: 'Overview',
         },
         {
             id: 2,
-            title: 'Price'
+            title: 'Pricing'
+        },
+        {
+            id: 3,
+            title: 'Marketplace'
+        },
+        {
+            id: 4,
+            title: 'Features'
         }
         ],           
     },
@@ -23,7 +31,15 @@ const menu = [
         },
         {
             id: 2,
-            title: 'Employees'
+            title: 'Team'
+        },
+        {
+            id: 3,
+            title: 'Blog'
+        },
+        {
+            id: 4,
+            title: 'Careers'
         }
         ],           
     },
