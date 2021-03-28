@@ -99,7 +99,7 @@ export const HeaderContent = styled.div<HeaderContentProps>`
 
 export const Menu = styled.div<MenuProps>`
     display: flex;
-    margin-top: -180px;
+    margin-top: -270px;
     flex-direction: column;
     align-items: center;
     background: var(--white);
