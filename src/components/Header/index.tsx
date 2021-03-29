@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useState } from 'react'
 
 import {
     Container,
@@ -11,6 +11,7 @@ import logoImg from '../../assets/images/logo.svg'
 import closeIcon from '../../assets/images/icon-close.svg'
 import hamburgerIcon from '../../assets/images/icon-hamburger.svg'
 import HamburgerMenu from '../HamburgerMenu'
+import NavbarMenu from '../NavbarMenu'
 
 
 const Header:React.FC = () => {
@@ -28,11 +29,15 @@ const Header:React.FC = () => {
                 <HeaderContent isOpen={isOpen}>
                     <div className={'menuInfo'}>
                         <img src={logoImg} alt="logo"/>
+                        <div className={'menu-nav-bar'}>
+                            <NavbarMenu />
+                        </div>
                         <button onClick={handleMenu}>
                             <img className={'hamburger-menu'} src={hamburgerIcon} alt="hamburger-menu"/>
                             <img className={'close-menu'} src={closeIcon} alt="close-menu"/>
                         </button> 
                     </div>
+
 
                     <InfoContent>
                         <h1>A modern publishing platform</h1>

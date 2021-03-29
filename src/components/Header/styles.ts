@@ -46,8 +46,10 @@ export const HeaderContent = styled.div<HeaderContentProps>`
             align-items: center;
             padding: 24px 56px;
             justify-content: space-between;
+        }
 
-            
+        .menu-nav-bar{
+            display: none;
         }
 
         .hamburger-menu{
@@ -90,7 +92,6 @@ export const HeaderContent = styled.div<HeaderContentProps>`
             width: 100%;
             align-items: center;
             padding: 24px 56px;
-            justify-content: space-between;
 
             > button {
                 display: none;

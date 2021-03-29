@@ -36,8 +36,6 @@ const HamburgerMenu:React.FC<HamburgerMenuProps> = ({isOpen}) => {
         setMenuData(menu)
     }, [])
 
-
-
     function handleSubMenu(id: number, index: number){
         setSelectedId(id)
         setSelectedIndex(index)
