@@ -7,6 +7,7 @@ import imgPhoneBgSectionTwo from '../../assets/images/illustration-phones.svg'
 import imgCirclesBgSectionTwo from '../../assets/images/bg-pattern-circles.svg'
 
 import imgComputerSectionThree from '../../assets/images/illustration-laptop-mobile.svg'
+import imgComputerDesktopSectionThree from '../../assets/images/illustration-laptop-desktop.svg'
 
 export const Container = styled.div`
     display: flex;
@@ -36,6 +37,13 @@ export const Content = styled.div`
             background-position: right -480px top 0px;
             background-size: 741px 739px;
         }
+
+        .third-section{
+            height: 920px;
+            background: url(${imgComputerDesktopSectionThree}) no-repeat;
+            background-position: left -280px top 180px;
+            background-size: 741px 600px;
+        }
     }
 
     @media(min-width: 1201px){
@@ -46,6 +54,13 @@ export const Content = styled.div`
             background: url(${imgBgDesktopSectionOne}) no-repeat;
             background-position: right -400px top 0px;
             background-size: contain;
+        }
+
+        .third-section{
+            height: 990px;
+            background: url(${imgComputerDesktopSectionThree}) no-repeat;
+            background-position: left -330px top 60px;
+            background-size: 1130px 912px;
         }
     }
 
@@ -318,13 +333,13 @@ export const ContentSecondSection = styled.div`
 
 export const ContentThirdSection = styled.div`
 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     @media(max-width: 900px){
         margin-top: 75px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
 
         .bg-computer-third-section{
             background: url(${imgComputerSectionThree}) no-repeat;
@@ -350,6 +365,39 @@ export const ContentThirdSection = styled.div`
             max-width: 300px;
             color: var(--gray-300);
 
+        }
+    }
+
+    @media(min-width: 901px){
+        margin-top: 240px;
+        align-items: flex-end;
+        padding-right: 100px;
+
+        
+
+        h1 {
+            margin-top: 45px;    
+            font-size: 27px; 
+            color: var(--blue-400);
+            font-weight: 600;
+            text-align: justify;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 27px;
+            margin-top: 18px;
+            text-align: justify;
+            max-width: 390px;
+            color: var(--gray-300);
+
+        }
+    }
+
+    @media(min-width: 1240px){
+        p{
+            max-width: 500px;
         }
     }
 

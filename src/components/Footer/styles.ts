@@ -12,7 +12,6 @@ export const Container = styled.footer`
         justify-content: center;
         margin-top: 100px;
         border-radius: 0px 100px 0px 0px;
-
     }
 `;
 

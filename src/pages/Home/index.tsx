@@ -64,7 +64,7 @@ const Home:React.FC = () => {
                 </section>
 
 
-                <section>
+                <section className={'third-section'}>
                     <ContentThirdSection>
                         <div className='bg-computer-third-section' />
                         <div>
