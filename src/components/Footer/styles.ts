@@ -129,7 +129,6 @@ export const MenuList = styled.div`
 
     @media(min-width: 901px){
         display: flex;
-        align-items: center;
 
         .containerMenu {
 
