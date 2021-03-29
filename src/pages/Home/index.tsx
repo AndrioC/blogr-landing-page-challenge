@@ -19,7 +19,7 @@ const Home:React.FC = () => {
                 <section>
                     <ContentFirstSection>
                         <div className={'firstSection-first-block'}>
-                            <h1>Dessigned for the future</h1>
+                            <h1>Designed for the future</h1>
                         </div>
 
                         <div className={'firstSection-second-block'}>
