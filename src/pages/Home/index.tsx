@@ -16,7 +16,7 @@ const Home:React.FC = () => {
             <Header />
 
             <Content>
-                <section>
+                <section className={'first-section'}>
                     <ContentFirstSection>
                         <div className={'firstSection-first-block'}>
                             <h1>Designed for the future</h1>
