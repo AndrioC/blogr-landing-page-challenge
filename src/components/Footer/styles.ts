@@ -45,21 +45,58 @@ export const Container = styled.footer`
 
 export const MenuList = styled.div`    
 
+    .containerMenu{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
+        span {
+            font-size: 18px;
+            color: var(--white);
+            font-weight: 800;
+            font-family: 'Ubuntu';
+            line-height: 33px;
+        }
+
+    }
+
+    .sub-list-menu {
+
+        li {
+            font-size: 18px;
+            font-weight: lighter;
+            line-height: 24px;
+            margin-top: 20px;
+            font-family: 'Ubuntu';
+            opacity: .75;
+            color: var(--white);  
+            position: relative; 
+            cursor: pointer;
+
+            &:hover{
+                &::after{
+                    content: '';
+                    height: 2px;
+                    bottom: 1px;
+                    position: absolute;
+                    left: 0;
+                    background: var(--white);  
+                    opacity: .75;                        
+                }
+            }  
+        }
+
+    }
+
     @media(max-width: 900px){
         margin-top: 30px;
+
         .containerMenu {
-            display: flex;
-            width: 100%;
-            flex-direction: column;
+
             align-items: center;
             justify-content: center;
 
             span {
-                font-size: 18px;
-                color: var(--white);
-                font-weight: 800;
-                font-family: 'Ubuntu';
-                line-height: 33px;
                 margin-bottom: 10px;    
             }
 
@@ -79,27 +116,11 @@ export const MenuList = styled.div`
             display: flex;
             align-items: center;
             flex-direction: column;
-            li {
-                margin-top: 21px;
-                font-size: 18px;
-                font-weight: lighter;
-                line-height: 24px;
-                font-family: 'Ubuntu';
-                opacity: .75;
-                color: var(--white);  
-                position: relative; 
-                cursor: pointer;
 
+            li {
                 &:hover{
                     &::after{
-                        content: '';
-                        height: 2px;
-                        width: 100%;
-                        bottom: 1px;
-                        position: absolute;
-                        left: 0;
-                        background: var(--white);  
-                        opacity: .75;                        
+                        width: 100%;                      
                     }
                 }     
             }
@@ -111,16 +132,8 @@ export const MenuList = styled.div`
         align-items: center;
 
         .containerMenu {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
 
             span {
-                font-size: 18px;
-                color: var(--white);
-                font-weight: 800;
-                font-family: 'Ubuntu';
-                line-height: 33px;
                 margin-bottom: 20px;
             }
 
@@ -136,32 +149,12 @@ export const MenuList = styled.div`
         .sub-list-menu{
 
             li {
-                font-size: 18px;
-                font-weight: lighter;
-                line-height: 24px;
-                font-family: 'Ubuntu';
-                opacity: .75;
-                color: var(--white);  
-                position: relative; 
-                cursor: pointer;
-                margin-top: 20px;
-
                 &:hover{
                     &::after{
-                        content: '';
-                        height: 2px;
-                        width: 40%;
-                        bottom: 1px;
-                        position: absolute;
-                        left: 0;
-                        background: var(--white);  
-                        opacity: .75;                        
+                        width: 40%;                     
                     }
                 }  
-            }
-
-            
+            }            
         }
-
     }
 `;
