@@ -4,51 +4,21 @@ import {
     Container,
     Content,
     HeaderContent,
-    Menu,
-    MenuList,
-    SubMenu,
-    AuthSignUp,
     InfoContent,
 } from './styles'
 
 import logoImg from '../../assets/images/logo.svg'
 import closeIcon from '../../assets/images/icon-close.svg'
 import hamburgerIcon from '../../assets/images/icon-hamburger.svg'
-import iconArrow from '../../assets/images/icon-arrow-dark.svg'
+import HamburgerMenu from '../HamburgerMenu'
 
-import menu from '../../assets/data/menu'
-
-interface MenuData{
-    id: number;
-    title: string;
-    submenu: {
-        id: number;
-        title: string;
-    }[]
-}
 
 const Header:React.FC = () => {
 
-    const [isOpen, setIsOpen] = useState(false)
-
-    const [selectedId, setSelectedId] = useState(0)
-    const [selectedIndex, setSelectedIndex] = useState(0)
-    const [isSelected, setIsSelected] = useState(false)
-
-    const [menuData, setMenuData] = useState<MenuData[]>([])
-
-    useMemo(() => {
-        setMenuData(menu)
-    }, [])
+    const [isOpen, setIsOpen] = useState(false)      
 
     function handleMenu(){
         setIsOpen(!isOpen)
-    }
-
-    function handleSubMenu(id: number, index: number){
-        setSelectedId(id)
-        setSelectedIndex(index)
-        setIsSelected(!isSelected)
     }
 
     return (
@@ -73,39 +43,8 @@ const Header:React.FC = () => {
                         </div>
                     </InfoContent>
                 </HeaderContent>
-
-                <Menu isOpen={isOpen}>
-                    <MenuList isOpen={isOpen} isSelected={isSelected} selectedId={selectedId} indexItem={selectedIndex}>
-                        <ul>
-                            {menuData.map((item, index) => (
-                                <>
-                                <li key={item.id} className={'first-list'}>
-                                    <span className={`text${(index + 1 === selectedId && isSelected) ? "-opacity" : ""}`}>{item.title}</span>
-                                    <button onClick={() => handleSubMenu(item.id, index)} key={item.id}>
-                                        <img src={iconArrow} alt="icon-arrow" className={`image${(index + 1 === selectedId && isSelected) ? "-active" : ""}`}/>
-                                    </button>
-                                </li>
-                                <SubMenu key={Math.random()} isSelected={isSelected} selectedId={selectedId} indexItem={index}>
-                                    <ul>
-                                    {item.submenu.map(sub => (
-                                        <li key={sub.id} className={'list-submenu'}>
-                                            <a href="#about">{sub.title}</a>
-                                        </li>
-                                    ))}
-                                    </ul>
-                                </SubMenu>
-                                </>
-                            ))}
-                        </ul>
-                    </MenuList>
-
-                    <div className={'division-line'}/>
-
-                    <AuthSignUp>
-                        <span>Login</span>     
-                        <button type="button">Sign Up</button>                    
-                    </AuthSignUp>
-                </Menu>
+                <HamburgerMenu isOpen={isOpen}/>
+                
                                
             </Content>
             
