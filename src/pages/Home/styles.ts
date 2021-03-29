@@ -395,6 +395,4 @@ export const ContentThirdSection = styled.div`
             max-width: 500px;
         }
     }
-
-
 `;

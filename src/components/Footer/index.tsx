@@ -26,14 +26,16 @@ const Footer:React.FC = () => {
     }, [])
     return (
         <Container>
-            <img src={logoImg} alt="logo"/> 
+            <div className={'logo-img'}>
+                <img src={logoImg} alt="logo"/> 
+            </div>
             <MenuList>
                 {menuData.map(item => (
                     <div key={item.id} className={'containerMenu'}>
                         <span>{item.title}</span>
                         
                             {item.submenu.map(sub => (
-                                <div className={'sub-list-menu'}>
+                                <div className={'sub-list-menu'} key={sub.id}>
                                     <ul>
                                         <li>{sub.title}</li>
                                     </ul>
