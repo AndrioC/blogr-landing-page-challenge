@@ -20,10 +20,14 @@ export const Content = styled.div`
     width: 100%;
     margin-top: 100px;
 
-    @media(max-width: 900px){
-        section {
-            width: 100%;
-        }
+
+    section {
+        width: 100%;
+    }
+
+
+    @media(min-width: 901px){
+        margin-top: 150px;
     }
 
 
@@ -31,11 +35,11 @@ export const Content = styled.div`
 
 export const ContentFirstSection = styled.div`
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
     @media(max-width: 900px){
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
        
         background: url(${imgBgSectionOne}) no-repeat;
         background-position: top 60px center;
@@ -97,6 +101,16 @@ export const ContentFirstSection = styled.div`
             }
         }
     }
+
+    @media(min-width: 901px){
+        .firstSection-first-block{
+            h1 {
+                font-size: 40px;
+                color: var(--blue-400);
+                font-weight: 600;
+            }
+        }
+    }
 `;
 
 export const ContentSecondSection = styled.div`
@@ -121,7 +135,7 @@ export const ContentSecondSection = styled.div`
             overflow: visible;
             background: url(${imgCirclesBgSectionTwo}) no-repeat, linear-gradient(135deg, var(--blue-950) 0%, var(--blue-100) 100%);
             background-position: bottom 180px center, 0 0;
-            background-size: 800px;
+            background-size: 800px, contain;
             border-radius: 0px 100px;
             z-index: 1;
             height: 624px;
@@ -171,6 +185,7 @@ export const ContentThirdSection = styled.div`
 
         .bg-computer-third-section{
             background: url(${imgComputerSectionThree}) no-repeat;
+            background-position: center;
             width: 100%;
             height: 360px;    
         }
