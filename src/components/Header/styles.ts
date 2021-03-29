@@ -102,12 +102,13 @@ export const HeaderContent = styled.div<HeaderContentProps>`
 `;
 
 export const InfoContent = styled.div`
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     @media(max-width: 900px){
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         margin-top: 108px;
 
         h1 {
@@ -170,5 +171,73 @@ export const InfoContent = styled.div`
                 }
             }
         }
+    }
+
+    @media(min-width: 901px){
+        margin-top: 120px;
+        
+        h1 {
+            font-size: 64px;
+            font-weight: 600;
+            color: var(--white);
+            max-width: 900px;
+            text-align: center;
+            line-height: 99px;
+        }
+
+        p {
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 27px;
+            color: var(--white);
+            max-width: 500px;
+            text-align: center;
+        }
+
+        > div {
+            display: flex;   
+            margin-top: 48px;         
+            button {
+                width: 138px;
+                height: 48px;    
+                border-radius: 27px;
+
+                & + button {
+                    margin-left: 18px;
+                }
+            }
+
+            .button-start-for-free{
+                background: var(--white);
+                color: var(--red-100);
+                font-size: 16px;
+                font-weight: bold;
+                font-family: 'Ubuntu';
+                transition: .3s;
+                border: none;
+
+                &:hover{
+                    background: var(--red-50); 
+                    color: var(--white);   
+                }
+            }
+
+            .button-learn-more{
+                background: transparent;
+                border: 2px solid var(--white);
+                color: var(--white);
+                font-size: 16px;
+                font-weight: bold;
+                font-family: 'Ubuntu';
+                transition: .3s;
+
+                &:hover{
+                    background: var(--white); 
+                    color: var(--red-100); 
+                }
+            }
+        }
+
     }
 `;
