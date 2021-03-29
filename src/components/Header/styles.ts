@@ -28,12 +28,9 @@ export const HeaderContent = styled.div<HeaderContentProps>`
     display: flex;
     align-items: center;
 
-
     img {
         cursor: pointer;
     }
-
-    
 
     /* Mobile and Tablet */
     @media (max-width: 900px){
@@ -59,7 +56,6 @@ export const HeaderContent = styled.div<HeaderContentProps>`
             &:hover{
                 filter: brightness(0.72);
             }
-
         }
 
         .close-menu {
