@@ -55,6 +55,55 @@ export const Content = styled.div`
 export const ContentFirstSection = styled.div`
     display: flex;
     flex-direction: column;
+
+    .firstSection-first-block{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            color: var(--blue-400);
+            font-weight: 600;
+        }
+    }
+
+    .firstSection-second-block{
+        margin-top: 390px;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            font-weight: 600;
+            color: var(--blue-400);
+        }
+
+        p {
+            margin-top: 16px;
+            font-weight: 300;
+            line-height: 27px;
+            color: var(--gray-300);
+            font-size: 16px;
+        }
+
+    }
+
+    .firstSection-third-block{
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                font-size: 28px;
+                color: var(--blue-400);
+                font-weight: 600;
+            }
+
+            p {
+                margin-top: 16px;
+                font-weight: 300;
+                line-height: 27px;
+                color: var(--gray-300);
+            }
+        }
+
     
     @media(max-width: 900px){
        
@@ -62,62 +111,42 @@ export const ContentFirstSection = styled.div`
         background-position: top 60px center;
 
         .firstSection-first-block{
-            display: flex;
-            align-items: center;
-            justify-content: center;
             h1 {
                 font-size: 28px;
-                color: var(--blue-400);
-                font-weight: 600;
             }
         }
 
         .firstSection-second-block{
             margin-top: 390px;
-            display: flex;
-            flex-direction: column;
             align-items: center;
 
             h1 {
                 font-size: 28px;
-                color: var(--blue-400);
-                font-weight: 600;
-                max-width: 240px;
                 text-align: center;
+                max-width: 240px;
             }
 
             p {
                 max-width: 300px;
-                text-align: center;
-                margin-top: 16px;
-                font-weight: 300;
-                line-height: 27px;
-                color: var(--gray-300);
+                text-align: center;                
             }
 
         }
 
         .firstSection-third-block{
             margin-top: 40px;
-            display: flex;
-            flex-direction: column;
             align-items: center;
+            
 
             h1 {
-                font-size: 28px;
-                color: var(--blue-400);
-                font-weight: 600;
                 max-width: 200px;
                 text-align: center;
+                
             }
 
             p {
                 max-width: 300px;
                 text-align: center;
-                margin-top: 16px;
-                font-weight: 300;
-                line-height: 27px;
-                color: var(--gray-300);
             }
         }
     }
@@ -125,52 +154,33 @@ export const ContentFirstSection = styled.div`
     @media(min-width: 901px){
         display: flex;
         .firstSection-first-block{
-            display: flex;
-            justify-content: center;
-            align-items: center;
             h1 {
                 font-size: 40px;
-                color: var(--blue-400);
-                font-weight: 600;
             }
         }
 
         .firstSection-second-block{
             margin-top: 60px;
-            display: flex;
-            flex-direction: column;
             padding-left: 150px;
 
             h1 {
                 font-size: 28px;
-                color: var(--blue-400);
-                font-weight: 600;
-                max-width: 500px;
                 text-align: justify;
+                max-width: 500px;
             }
 
             p {
                 max-width: 500px;
                 text-align: justify;
-                margin-top: 16px;
-                font-weight: 300;
-                line-height: 27px;
-                color: var(--gray-300);
-                font-size: 16px;
             }
 
         }
 
         .firstSection-third-block{
             margin-top: 66px;
-            display: flex;
-            flex-direction: column;
             padding-left: 150px;
 
             h1 {
-                font-size: 28px;
-                color: var(--blue-400);
-                font-weight: 600;
                 max-width: 500px;
                 text-align: justify;
             }
@@ -178,10 +188,6 @@ export const ContentFirstSection = styled.div`
             p {
                 max-width: 500px;
                 text-align: justify;
-                margin-top: 16px;
-                font-weight: 300;
-                line-height: 27px;
-                color: var(--gray-300);
             }
         }
     }
