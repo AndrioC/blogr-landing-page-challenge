@@ -9,6 +9,7 @@ interface SubMenuListProps{
 export const Container = styled.nav<SubMenuListProps>`
 
     @media(min-width: 901px){
+        display: flex;
         margin-left: 72px;
 
         .menu-list{
@@ -100,12 +101,7 @@ export const SubMenu = styled.div<SubMenuListProps>`
 
                 > li {
                     list-style: none;
-                    transition: .3s;
-
-
-                    &:hover{
-                        font-weight: bold;
-                    }
+                    
 
                 
                     a {
@@ -113,6 +109,12 @@ export const SubMenu = styled.div<SubMenuListProps>`
                         font-size: 15px;
                         font-family: 'Ubuntu';
                         color: var(--blue-950);
+
+                        transition: font-weight .3s;
+
+                        &:hover{
+                            font-weight: bold;
+                        }
                         & + a {
                             margin-top: 30px;
                         }
@@ -130,3 +132,50 @@ export const SubMenu = styled.div<SubMenuListProps>`
     }
     
 `;
+
+export const AuthSignUp = styled.div`
+
+    @media(min-width: 901px){
+        position: absolute;
+        padding-right: 60px;
+        right: 0;
+        top: 21px;
+
+        button {
+            margin-left: 33px;
+            border: 0;            
+        }
+
+        .button-login{
+            background: transparent;
+            font-family: 'Ubuntu';
+            font-size: 16px;
+            color: var(--white);
+            font-weight: bold;
+            line-height: 18px;
+            transition: filter .3s;
+
+            &:hover{
+                filter: brightness(0.72);
+            }
+
+        }
+
+        .button-sign-up{
+            width: 138px;
+            height: 48px;
+            border-radius: 28px;
+            color: var(--red-70);
+            font-family: 'Ubuntu';
+            font-weight: bold;
+            font-size: 16px;
+            transition: .3s;
+
+            &:hover {
+                background: var(--red-50);
+                color: var(--white);
+            }
+        }
+    }
+
+`

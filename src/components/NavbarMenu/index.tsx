@@ -3,6 +3,7 @@ import React, { useMemo, useState } from 'react'
 import {
     Container,
     SubMenu,
+    AuthSignUp
 } from './styles'
 
 import iconArrow from '../../assets/images/icon-arrow-light.svg'
@@ -37,28 +38,6 @@ const NavbarMenu:React.FC = () => {
 
     return (
         <Container isSelected={isSelected} selectedId={selectedId} indexItem={selectedIndex}>
-            {/* <ul>
-                {menuData.map((item, index) => (
-                    <>
-                    <li key={item.id} className={'first-list'}>
-                        <span className={`text${(index + 1 === selectedId && isSelected) ? "-opacity" : ""}`}>{item.title}</span>
-                        <button onClick={() => handleSubMenu(item.id, index)} key={item.id}>
-                            <img src={iconArrow} alt="icon-arrow" className={`image${(index + 1 === selectedId && isSelected) ? "-active" : ""}`}/>
-                        </button>
-                    </li>
-                    <SubMenu key={Math.random()} isSelected={isSelected} selectedId={selectedId} indexItem={index}>
-                        <ul>
-                        {item.submenu.map(sub => (
-                            <li key={sub.id} className={'list-submenu'}>
-                                <a href="#about">{sub.title}</a>
-                            </li>
-                        ))}
-                        </ul>
-                    </SubMenu>
-                    </>
-                ))}
-            </ul>   */}  
-
             <ul className={'menu-list'}>
                 {menuData.map((item, index) => (
                     <li key={item.id}>
@@ -81,6 +60,11 @@ const NavbarMenu:React.FC = () => {
                 ))}
                 
             </ul>
+
+            <AuthSignUp>                         
+                <button className={'button-login'} type="button">Login</button>                        
+                <button className={'button-sign-up'} type="button">Sign Up</button>
+            </AuthSignUp> 
 
             
         </Container>
