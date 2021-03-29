@@ -27,13 +27,13 @@ export const Content = styled.div`
     }
 
 
-    @media(min-width: 901px) and (max-width: 1200px){
+    @media(min-width: 901px){
         margin-top: 150px;
 
         .first-section{
             height: 900px;
             background: url(${imgBgDesktopSectionOne}) no-repeat;
-            background-position: right -400px top 0px;
+            background-position: right -480px top 0px;
             background-size: 741px 739px;
         }
     }
@@ -166,7 +166,6 @@ export const ContentFirstSection = styled.div`
             display: flex;
             flex-direction: column;
             padding-left: 150px;
-            margin-bottom: 270px;
 
             h1 {
                 font-size: 28px;
@@ -199,6 +198,7 @@ export const ContentSecondSection = styled.div`
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        margin-top: 270px;
 
         > div {
             display: flex;
@@ -247,7 +247,6 @@ export const ContentSecondSection = styled.div`
 
 
     @media(min-width: 901px){
-        margin-top: 400px;
         display: flex;
         width: 100%;
         align-items: center;
@@ -257,39 +256,47 @@ export const ContentSecondSection = styled.div`
         > div {
             display: flex;
             width: 100%;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
-            overflow: visible;
             background: url(${imgCirclesBgSectionTwo}) no-repeat, linear-gradient(135deg, var(--blue-950) 0%, var(--blue-100) 100%);
-            background-position: bottom 180px center, 0 0;
+            background-position: top -360px left -162px, 0 0;
             background-size: 800px, contain;
             border-radius: 0px 100px;
-            z-index: 1;
-            height: 624px;
+            height: 400px;
             position: relative;
 
             .bg-phone-second-section{
-                height: 420px;
-                width: 400px;
+                height: 540px;
+                width: 510px;
                 position: absolute;
                 background: url(${imgPhoneBgSectionTwo}) no-repeat;
                 background-position: center;
-                background-size: cover;
-                top: -210px;
+                background-size: contain;
+                top: -60px;
+                left: 30px;
+            }
+
+            .second-section-text{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;                
             }
 
             h1 {
                 font-size: 40px;
                 font-weight: 600;
                 color: var(--white);    
-                text-align: center;
-                margin-top: 180px;
+                text-align: justify;
+                margin-left: 420px;
+                max-width: 300px;
             }
 
             p {
                 margin-top: 12px;
-                text-align: center;
+                margin-left: 426px;
+                text-align: justify;
                 font-size: 16px;
                 line-height: 27px;
                 color: var(--white);
@@ -299,6 +306,18 @@ export const ContentSecondSection = styled.div`
         }
     }
 
+    @media(min-width: 1200px){
+        > div {
+            h1 {
+                max-width: 600px;
+            }
+
+            p {
+                max-width: 500px;
+                margin-left: 390px;
+            }
+        }
+        }
 `;
 
 export const ContentThirdSection = styled.div`
